@@ -81,9 +81,9 @@
                             <a href="{{ asset('admin/detailsBill/'. $bill->bill_id) }}" >
                                 <button type="submit" class="btn btn-success"> Hóa đơn chi tiết </button>
                             </a>
-                            {{-- <a href="javascrpit:" onclick="approveBill({{ $bill->bill_id }})">
+                            <a href="{{ asset('admin/approveBill/'.$bill->bill_id) }}" onclick="message()">
                                 <button type="submit" class="btn btn-success"> Duyệt lại hóa đơn </button>
-                            </a> --}}
+                            </a>
                             {{-- <a href="javascrpit:" onclick="cancelBill({{ $bill->bill_id }})">
                                 <button type="submit" class="btn btn-danger">Hủy</button>
                             </a> --}}
@@ -136,5 +136,8 @@
                 }
             });
         }
+        function message() {
+            alertify.success('Đã duyệt lại hóa đơn');
+         }
     </script>
 @endsection

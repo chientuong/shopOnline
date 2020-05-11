@@ -192,7 +192,7 @@
 														<td>
                                                             <img src="{{ asset('public/image/'.$value->prod_img) }}" alt="" width="100px" height="100px">
                                                         </td>
-														<td>{{ number_format((float)$value->prod_name)." "."VNĐ" }}</td>
+														<td>{{ $value->prod_name }}</td>
 														<td class="product_price">
                                                             {{ number_format((float)$value->prod_price)." "."VNĐ" }}
 														</td>
